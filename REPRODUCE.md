@@ -1,6 +1,7 @@
 # Reproducing a SCULPTOR run
 
-This package is self-contained: it holds the runtime code, every trained model
+After the three release assets have been extracted into the package root, this
+package is self-contained: it holds the runtime code, every trained model
 and the data a production-style run needs. No file outside this folder is
 required, and nothing inside refers to the machine it was built on.
 

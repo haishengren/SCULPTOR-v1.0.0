@@ -1,4 +1,4 @@
-> **Code-only repository.** The trained model checkpoints, the datasets and the production result tables are distributed as release assets (see *Releases*) or in the Zenodo archive, not in this git repository.
+> **Code repository (with the core bond-completion checkpoints).** The full trained model set, the datasets and the production result tables are distributed as release assets (see *Releases*), not in this git repository.
 
 > How to run: enter the package root (`SCULPTOR_v1.0.0`), run
 > `powershell -ExecutionPolicy Bypass -File .\setup_env.ps1`, then invoke the
@@ -546,9 +546,15 @@ python -m fuel_design.cli predict-cbh-bdc-formation --smiles C1CCCCC1
 
 ## Package manifest and integrity
 
-`manifest.json` lists every file in the full distribution. The integrity of the
-model and data archives is given by the SHA-256 values listed in the release
-notes.
+`manifest.json` lists every file in the full distribution. The SHA-256 values of
+the three release assets are given both in the release notes and in `SHA256SUMS`.
+After downloading the three archives into the package root, run
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\verify_sha256.ps1
+```
+
+to check them before extraction.
 
 
 ## Generation schedule
